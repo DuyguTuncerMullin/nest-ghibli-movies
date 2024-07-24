@@ -16,7 +16,9 @@ export class FilmsController {
   }
 
   @Get(':id')
-  async getFilmById(@Param('id') id: string): Promise<Film | { error: string }> {
+  async getFilmById(
+    @Param('id') id: string,
+  ): Promise<Film | { error: string }> {
     try {
       const film = await this.filmsService.fetchFilmById(id);
       return film;
