@@ -17,6 +17,7 @@ const Films: React.FC = () => {
         setFilms(data);
       } catch (error) {
         console.error("Error fetching films:", error);
+        console.error("Error fetching films:", error);
       }
     };
 
